@@ -1,0 +1,36 @@
+<%- include('partials/navbar.ejs') %>
+
+    <section>
+      <div class="container">
+        <div class="home-container">
+          <h1>HOME</h1>
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit magni
+            nisi architecto, rerum a, cum dignissimos dolorem cumque quis
+            reiciendis laboriosam est aut culpa fugiat incidunt vel molestias
+            consequatur nemo sint at voluptatibus voluptas. Facilis, quo
+            possimus, natus laborum culpa animi corrupti nisi omnis numquam
+            fugiat sequi architecto officia mollitia!
+          </h4>
+        </div>
+
+    
+       <% for(let post of posts){ %>
+       <% let halfPost=post.body.slice(0,140) %>
+            <div class="post-container">
+                <h1><%=post.title %></h1>
+                <h4><%=post.body%>
+                <a class="read-more" href="#"> ...read more</a>
+                </h4>
+            </div>
+
+        
+       <% } %>
+
+      </div>
+      <a class="create-post" href="/create-post">Create a blog post</a>
+    </section>
+
+    
+  </body>
+</html>
